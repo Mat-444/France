@@ -1,0 +1,592 @@
+*{
+ margin: 0;
+ text-decoration: none;
+ scroll-behavior: smooth;
+ 
+}
+/*Générale*/
+body{
+    background-color: rgb(246, 248, 255);
+}
+h1 {
+    position: relative;
+    top: 25vh;
+    text-align: center;
+    font-size: 35px;
+    z-index: 2;
+    padding: 0px 10% 0px 10%;
+    font-size: 55px;
+    font-family: Lobster;
+    color: black;
+}
+h2 {
+    font-size: 30px;
+    font-family: lobster, sans-serif;  
+}
+h3{
+    font-size: 20px;
+    font-family: courgette, sans-serif;
+}
+p {
+    font-size: 17px;
+    font-family: Quicksand, sans-serif;
+}
+.section {
+    background-image: url("img/subtle_white_feathers.png");
+}
+/*img{
+    display: block;
+}
+/*Fin générale*/
+
+
+
+
+/*Navbar*/
+.navigation img {
+    width: 190px;
+    height: auto;
+}
+.navigation {
+    width: 100%;
+    min-height: 60px;
+    max-height: 180px;
+    position: fixed;
+    z-index: 3;
+    border-bottom:1px solid black;
+    box-shadow: 0px 0.2px 6px black;
+    background-color: white;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap:wrap;
+}
+#navbar a{
+    text-align: center;
+    width: 75px;
+    display: inline-block;
+    padding-right: 12px;
+    padding-left: 12px;
+    padding-bottom: 20px;
+    padding-top: 20px;
+    color: black;
+    text-decoration: none;
+    background-color: white; 
+    font-family: Quicksand, sans-serif;
+    transition: color 0.5s linear, background-color 0.5s linear;
+}
+#navbar a:hover{
+    background-color: rgb(77, 77, 77);
+    color: white;
+    
+}
+a h3{
+    font-size: 40px;
+}
+/*Fin navbar*/
+
+
+
+
+/*Accueil site*/
+.presentation{
+    width: 100%;  
+    background-image: url("img/presentation/image-presentation.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh; /* vh = comme les pourcentages, mais pour height */
+    background-position: center;  
+}
+
+
+#presentation_bouton{
+    position: relative;
+    top: 55vh;
+    text-align: center;
+    margin: auto;
+    border-radius:500px;
+    font-size: 35px;
+    z-index: 2;
+    display: block;
+    background-color: hsl(249, 98%, 56%);
+    width: 425px;
+    font-family: Lobster, sans-serif;
+}
+#presentation_bouton:hover{
+    animation: wheelHueColor 3s infinite; /*lance une animation appelé wheelHueColor*/
+}
+@keyframes wheelHueColor {
+    from, to { background-color: hsl(249, 98%, 56%); }
+    33%      { background-color: rgb(255, 255, 255); }
+    67%      { background-color: rgb(207, 23, 23); }
+}
+#presentation_bouton h3{
+    color: white;
+    padding-top: 9px;
+    height: 60px;
+}
+#presentation_bouton h3:hover{
+    transition: 0.5s;
+    animation: wheelHueColor2 3s infinite; /*lance une animation appelé wheelHueColor*/
+}
+@keyframes wheelHueColor2 {
+    from, to { color: hsl(0, 0%, 100%); }
+    30%      { color: rgb(0, 0, 0); }
+    70%      { color: rgb(255, 255, 255); }
+  }
+.presentation img {
+    width: 100%;
+    position: absolute;
+    z-index: 1;
+    clip-path: inset(0px 0px 100px 0px);
+}
+/*Fin accueil site*/
+
+
+
+
+/*région*/
+.region{
+    text-align: center;
+    padding-top: 150px;
+    flex-wrap: wrap;
+}
+.conteneur_region{
+    display: inline-flex;
+    margin-top: 100px;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.region_titre_principal {
+    position: relative;
+    top: 50px
+}
+.region_spe{
+    margin: 30px;
+}
+.conteneur_region_spe{
+    display: block;
+    width: 300px;
+    height: 250px;
+    border-top:1px solid black;
+    border-right:2px solid black;
+    border-left:2px solid black;
+    border-bottom: 2px solid black;
+    border-bottom-left-radius: 50px;
+    border-bottom-right-radius:50px;
+    margin-top: 15px;
+    position: relative;
+    transition: box-shadow 0.3s linear;
+}
+.conteneur_region_spe img{
+    width: 300px;
+    height: 175px;
+    z-index: 2;
+}
+.region_text{
+    padding: 15px; 
+}
+.region_hover {
+    position: absolute;
+    z-index: 10;
+    right: 0px;
+    opacity: 0;
+    transition: opacity 0.3s linear 0.1s;
+}
+.region_hover:hover {
+    opacity: 1; 
+}
+.conteneur_region_spe:hover{
+    box-shadow:10px 10px 30px black ;    
+}
+/*Fin région*/
+
+
+
+
+/*paysage*/
+.paysage {
+    padding-top: 200px;
+    height: 1000px;
+    padding: 200px 10px 10px 10px;
+    position: relative;   
+}
+.paysage img {
+   width: 100%;
+   height: 100%;
+}
+.conteneur_paysage_image {
+    display: grid;
+    grid-template: repeat(2, 100px) repeat(2,75px) repeat(2,100px) /  300px 400px 300px;
+    justify-content: center; 
+    grid-gap: 5% 5%;  
+    bottom: 200px;
+}
+.paysage_image { 
+  display: inline-flex;
+  flex-wrap: wrap;
+ 
+}
+
+.conteneur_paysage_hover {
+    display: grid;
+    grid-template: repeat(2, 100px) repeat(2,75px) repeat(2,100px) /  300px 400px 300px;
+    justify-content: center; 
+    grid-gap: 5% 5%; 
+    position: relative;
+    bottom: 550px;
+    
+}
+
+
+
+.paysage_titre {
+    position: relative;
+    padding: 10px 0px;
+    top: 395px;
+    width: 300px;
+    margin: auto;
+    z-index:2;
+    text-align: center;
+    border: 2px solid black;
+    border-radius: 10px;
+    background-color: rgb(246, 248, 255); 
+    transition: background-color,color, 500ms linear;
+}
+
+.paysage_titre:hover {
+    background-color: black;
+    box-shadow: 10px 10px 30px black; 
+    color: white;
+    
+}
+
+
+#nord {
+    grid-area: 1 / 2 / span 2 / span 1;
+}
+.conteneur_paysage_hover #nord {
+    opacity: 0;
+    transition: opacity 0.5s;
+}
+.paysage_titre:hover ~ .conteneur_paysage_hover #nord {
+     opacity: 1;
+}
+#sud {
+    grid-area: 5 / 2 / span 2 / span 1;
+}
+.conteneur_paysage_hover #sud {
+    opacity: 0;
+    transition: opacity 0.5s linear 0.3s;
+}
+.paysage_titre:hover ~ .conteneur_paysage_hover #sud {
+    opacity: 1;
+}
+#est {
+    grid-area: 1 / 1 / span 3 / span 1;
+} 
+.conteneur_paysage_hover #est {
+    opacity: 0;
+    transition: opacity 0.5s linear 0.5s;
+}
+.paysage_titre:hover ~ .conteneur_paysage_hover #est{
+        opacity: 1;
+    }
+#est_2 {
+    grid-area: 4 / 1 / span 3 / span 1;
+}
+
+.conteneur_paysage_hover #est_2 {
+    opacity: 0;
+    transition: opacity 0.5s linear 0.4s;
+}
+
+.paysage_titre:hover ~ .conteneur_paysage_hover #est_2 {
+    opacity: 1;
+}
+#ouest {
+    grid-area: 1 / 3 / span 3 / span 1;
+}
+
+.conteneur_paysage_hover #ouest {
+    opacity: 0;
+    transition: opacity 0.5s linear 0.1s;
+}
+
+    .paysage_titre:hover ~ .conteneur_paysage_hover #ouest {
+        opacity: 1;
+    }
+#ouest_2 {
+    grid-area: 4 / 3 / span 3 / span 1;
+}
+
+    .conteneur_paysage_hover #ouest_2 {
+        opacity: 0;
+        transition: opacity 0.5s linear 0.2s;
+    }
+
+    .paysage_titre:hover ~ .conteneur_paysage_hover #ouest_2 {
+        opacity: 1;
+    }
+/*Fin paysage*/
+
+
+
+
+/*spécialité*/
+.specialite h2{
+    justify-content: center;
+    text-align: center;
+    position: relative;
+    width: 100%;
+    padding-top: 100px
+}
+.specialite_titre h3{
+    justify-content: center;
+    text-align: center;
+    position: relative;
+    width: 100%;
+    top: 75px;
+    font-size: 25px;
+}
+
+/* Spécialités Sucrées*/
+.conteneur_specialite_sucre{
+    display: flex;
+    margin: 100px auto 0% auto;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+    width: 100%; 
+    max-width: 1200px; 
+}
+.specialite_img img{
+    width: 300px;
+    height: 200px;
+    border-radius: 10px;
+    border-bottom: 1px solid #202020;
+}
+.conteneur_specialite_spe_sucre{
+    display: block;     /* si le texte dépasse l'image, il retourne à la ligne*/
+    width: 300px;
+    height: 275px;
+    border: 2px solid black;
+    border-radius: 10px;
+    text-align: center;
+    margin: 30px;
+    z-index: 2;
+    background-color: rgb(246, 248, 255);
+    padding-bottom: 0px;
+    transition: height 1s; 
+}
+.specialite_texte_sucre {
+    margin: 20px;
+    height: 20px;
+}
+.specialite_texte_sucre p{
+    visibility: collapse;
+    opacity: 0;
+    text-align: center;
+    border-top: 0px solid black;
+    z-index: 1;
+    width: 290px;
+    padding: 10px 5px 10px 5px;
+    border-bottom-left-radius:10px ;
+    border-bottom-right-radius: 10px;
+}
+.conteneur_specialite_spe_sucre:hover {
+    height:340px;
+}
+.conteneur_specialite_spe_sucre:hover p{
+    visibility: visible;
+    position: relative;
+    right: 22px;
+    opacity: 1;
+    transition: opacity 1s ease-in 150ms;   
+}
+/*Fin spécialités sucrées*/
+
+
+
+
+/* Spécialités Salées*/
+.conteneur_specialite_spe_sale{
+    display: block;     /* si le texte dépasse l'image, il retourne à la ligne*/
+    width: 300px;
+    height: 275px;
+    border: 2px solid black;
+    border-radius: 10px;
+    text-align: center;
+    margin: 30px;
+    z-index: 2;
+    background-color: rgb(246, 248, 255);
+    padding-bottom: 0px;
+    transition: height 1s; 
+}
+.conteneur_specialite_sale{
+    display: flex;
+    margin: 100px auto 0% auto;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+    width: 100%; 
+    max-width: 1200px; 
+}  
+.specialite_texte_sale {
+    margin: 20px;
+    font-family: Lobster, sans-serif; 
+    height: 20px;
+}
+ .specialite_texte_sale p{
+    visibility: collapse;
+    opacity: 0;
+    text-align: center;
+    border-top: 0px solid black;
+    z-index: 1;
+    width: 290px;
+    padding: 10px 5px 10px 5px;
+    border-bottom-left-radius:10px ;
+    border-bottom-right-radius: 10px;
+    top: -50px;  
+}
+.conteneur_specialite_spe_sale:hover h3{
+    opacity: 0;
+    transition: opacity 0.5s ease-out 0ms;
+}
+.conteneur_specialite_spe_sale:hover p{
+    visibility: visible;
+    position: relative;
+    right: 22px;
+    opacity: 1;
+    transition: opacity 0.5s ease-in 0.5s;  
+}
+/*Fin spécialité salées*/
+/*Fin spécialité*/
+
+
+
+
+/*Patrimoine*/
+.section_patrimoine{
+
+    padding: 10%;
+
+    width: 80%;
+  
+
+}
+.titre_patrimoine h2{
+    text-align: center;
+}
+.conteneur_patrimoine{
+    display: inline-flex;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+    width: 100%;
+    margin-top: 100px;
+}
+.image_patrimoine img{
+    height: 496px;
+    width: auto;
+    box-shadow: -50px -16px teal;
+    z-index: 2;   
+    display: block;
+    position: relative;
+    border-left: 2px solid black;
+    border-bottom: 2px solid black;
+    border-top: 2px solid black;
+    border-right: 0px solid black;
+}
+
+.conteneur_patrimoine .text_patrimoine{
+    display: block;
+    height: 496px;
+    width: 500px;
+    background-color: rgb(246, 248, 255);
+    border-left: 0px solid black;
+    border-bottom: 2px solid black;
+    border-top: 2px solid black;
+    border-right: 2px solid black;
+    box-shadow: -50px -16px teal;
+    text-align: center;
+    z-index: 0;
+    overflow-y:scroll;
+}
+.text_patrimoine p{
+    padding: 50px;
+}
+
+/*Fin patrimoine*/
+
+
+
+
+/*Formulaire*/
+.formulaire{
+    padding-bottom: 50px;
+    width: 80%;
+    margin: 0 auto;
+}
+
+.formulaire_titre{
+    text-align: center;
+    padding-bottom: 40px;
+}
+
+.formulaire_contenu{
+    padding: 20px 0px;
+    background-color: #7683A3;
+    border: 1px solid black;
+    border-radius: 10px;
+    box-shadow: 5px 1px 1px;
+    max-width: 2000px; 
+}
+
+.formulaire_contenu_info{
+    display: flex;
+    flex-wrap: wrap;
+    width: 90%;
+    margin: auto;
+    text-align: center;
+    justify-content: center;
+    align-content: center;
+    margin-bottom: 20px;
+      
+}
+
+input[type=text] {
+    font-family: quicksand, sans-serif;
+    font-size: 18px;
+    margin: 10px;
+    width: 300px;
+}
+
+input[type=submit] {
+    font-family: lobster;
+    width: 100px;
+    text-align: center;
+    font-family: quicksand, sans-serif;
+    font-size: 18px;
+    box-shadow: 3px 1px 1px;
+    border: 1px solid black;
+    display: block;
+    margin: auto;
+}
+
+
+/*Fin formulaire*/
+
+
+
+
+
+/*Footer*/
+footer{
+    padding: 50px;
+    background-color: black;
+    color: rgb(246, 248, 255);
+}
+/*Fin footer*/
